@@ -1,0 +1,35 @@
+ #include <stdio.h>
+ int main()
+ { int h,m,s,d=100,i=1;
+ printf("enter timer\n");
+ scanf("%d%d%d",&h,&m,&s);
+ while(1){
+ if(h<25 && m<61 && s<61)
+ {       
+ printf("\n");        
+ printf("%d : %d : %d",h,m,s);        
+ s--;        
+ if(s==0 && m>0)        
+ { m=m-1;          
+ s=60;        
+ }        
+ else if(m==0 && h>0)        
+ {           
+ h=h-1;           
+ m=60;        
+ }        
+ else if(h==0 && m==0 && s==0)        
+ {            
+ printf("\nhappy birthday");            
+ break;        
+ }                    
+ }    
+ else    
+ {        
+ printf("invalid time");        
+ break;    
+ }    
+ sleep(d);
+ }    
+ return 0;
+ }
